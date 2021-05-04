@@ -1,0 +1,80 @@
+.top{
+   /*background-color: @color_dark-grey;
+   background-image: url('../img/header-image_rectangle.png');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: auto;*/
+   background: @color_dark-grey url('../img/header.png') no-repeat center;
+   padding: 9rem 0 3.5rem;
+   color: @color_white;
+
+   @media screen and (max-width: 576px){
+      background-image: none;
+   }
+
+   &__title{
+      text-align: center;
+      font-family: "Open Sans";
+      margin-bottom: 5rem;
+
+      & h1{
+         font-weight: 600;
+         font-size: 3rem;
+         margin: 0 auto;
+      }
+
+      & span{
+         display: block;
+         font-weight: 400;
+         font-size: 1rem;
+         margin-top: 32px;
+      }
+   }
+
+   &__buttons{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   &__down{
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 4.25rem 0 0;
+
+      & a{
+         color: inherit;
+         text-decoration: none;
+         transition: color @transition_time;
+
+         &:hover{
+            color: @color_green;
+         }
+      }
+   }
+}
+
+.btn_white(){
+   border: 1px solid @color_white;
+   background: transparent;
+   font-family: Roboto;
+   font-weight: 700;
+   font-size: 1rem;
+   line-height: 1.1rem;
+   margin: 15px;
+   transition: background @transition_time, border @transition_time;
+
+   &:hover{
+      background: @color_green;
+      border: 1px solid @color_green;
+   }
+}
+
+.btn_white{
+      .btn(1.5rem, 1.2rem);
+      .btn_white();
+   }
+
+.btn-ext{
+   .btn(2.2rem, 1.2rem);
+}

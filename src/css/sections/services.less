@@ -1,0 +1,89 @@
+.services{
+   background: @color_light-green;
+   padding: 8rem 0 5.6rem;
+   color: @color_dark-grey;
+   font-family: "Open Sans";
+
+   &__title{
+      .title-h2();
+   }
+
+   &__items{
+      .row-flex();
+      justify-content: center;
+   }
+
+   &__item-logo{
+      width: 62px;
+      height: 62px;
+      color: @color_dark-grey;
+      font-size: 3rem;
+      transition: color @transition_time;
+   
+      &:hover, &.active{
+         color: @color_white;
+      }
+   }
+
+   &__item{
+      .col();
+      .size(4);
+      .size-md(6);
+      .size-sm(10);
+      .size-xs(12);
+
+      background: @color_white;
+      text-align: center;
+      padding: 2.9rem 2rem 1.7rem;
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: background @transition_time, color @transition_time;
+
+      & h3{
+         margin: 1.6rem 0 1rem;
+         font-size: 1rem;
+         font-weight: 600;
+         width: 100%;
+      }
+
+      & p{
+         font-size: 0.75rem;
+         font-weight: 400;
+         margin-bottom: 2rem;
+      }
+
+      &:hover, &.active{
+         background: @color_green;
+         color: @color_white;
+      }
+
+      @media screen and (max-width:400px){
+         padding: 2rem 0.5rem 1rem;
+      }
+   }
+}
+
+.btn_black(){
+   color: @color_dark-grey;
+   border: 1px solid @color_dark-grey;
+   background: transparent;
+   font-family: "Open Sans";
+   font-weight: 600;
+   font-size: 1rem;
+   line-height: 1.1rem;
+   margin-top: auto;
+
+   &:hover, &.active{
+      background: @color_green;
+      color: @color_white;
+      border: 1px solid @color_white;
+   }
+}
+
+.btn_black{
+   .btn(0.6rem, 1rem);
+   .btn_black();
+   transition: background @transition_time, color @transition_time;
+}

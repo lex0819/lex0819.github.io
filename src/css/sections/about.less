@@ -1,0 +1,43 @@
+.about{
+   background: @color_white;
+   padding: 6rem 0 0;
+   color: @color_dark-grey;
+   font-family: "Open Sans";
+
+   &__title{
+      .title-h2(3.5rem);
+   }
+
+   &__items{
+      .row-flex();
+      justify-content: center;
+   }
+
+   &__item{
+      .col();
+      .size(4);
+      .size-md(6);
+      .size-sm(10);
+      .size-xs(12);
+
+      text-align: center;
+      margin-top: 2rem;
+      padding: 10px 10px 5rem;
+
+      & h3{
+         margin: 1.6rem 0 1rem;
+         font-size: 1rem;
+         font-weight: 600;
+      }
+
+      & p{
+         font-size: 0.75rem;
+         font-weight: 400;
+      }
+
+      &-logo{
+         font-size: 3.5rem;
+         font-weight: 100;
+      }
+   }
+}
